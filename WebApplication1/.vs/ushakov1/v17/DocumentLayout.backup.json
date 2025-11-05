@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|d:\\users\\tmu10.server-econom\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\webapplication1\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|solutionrelative:dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|d:\\users\\tmu10.server-econom\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\webapplication1\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|d:\\users\\tmu10.server-econom\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\webapplication1\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|d:\\users\\tmu10.server-econom\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\webapplication1\\service\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|solutionrelative:service\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|d:\\users\\tmu10.server-econom\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\webapplication1\\service\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|solutionrelative:service\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|d:\\users\\tmu10.server-econom\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\webapplication1\\dal\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|solutionrelative:dal\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|d:\\users\\tmu10.server-econom\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\webapplication1\\domain\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|solutionrelative:domain\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|d:\\users\\tmu10.server-econom\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\webapplication1\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8829868-54C2-48C2-B8BB-13A11A2C404A}|ushakov.csproj|solutionrelative:domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T12:15:00.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Service\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\ProductService.cs",
+              "ToolTip": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Service\\Services\\ProductService.cs",
+              "RelativeToolTip": "Service\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T12:14:54.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T12:08:23.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\DAL\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DAL\\AppDbContext.cs",
+              "ToolTip": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\DAL\\AppDbContext.cs",
+              "RelativeToolTip": "DAL\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T12:14:32.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Service\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Service\\Interfaces\\IProductService.cs",
+              "ToolTip": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Service\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "Service\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T12:14:46.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\DAL\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\DAL\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "DAL\\Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T12:14:38.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Domain\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Domain\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T12:14:27.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Product.cs",
+              "ToolTip": "D:\\Users\\tmu10.SERVER-ECONOM\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (3)\\work\\WebApplication1\\Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T12:14:12.384Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

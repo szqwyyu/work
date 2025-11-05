@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using WebApplication1.DAL;
+using WebApplication1.DAL.Repositories;
+using WebApplication1.Domain.Interfaces;
+using WebApplication1.Service.Interfaces;
+using WebApplication1.Service.Services;
 
 namespace WebApplication1
 {
@@ -22,6 +24,14 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Для быстрого старта используем InMemory; в проде замените на реальную БД (SqlServer/Postgres и т.д.)
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseInMemoryDatabase("PetCatalogDb"));
+
+            // Регистрация репозиториев и сервисов (зависимости направлены внутрь)
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
+
             services.AddControllersWithViews();
         }
 
@@ -46,7 +56,7 @@ namespace WebApplication1
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Products}/{action=Index}/{id?}");
             });
         }
     }
