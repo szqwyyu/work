@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PetShopService/1.0.0": {
+        "dependencies": {
+          "PetShopDal": "1.0.0",
+          "PetShopDomain": "1.0.0"
+        },
+        "runtime": {
+          "PetShopService.dll": {}
+        }
+      },
+      "PetShopDal/1.0.0": {
+        "dependencies": {
+          "PetShopDomain": "1.0.0"
+        },
+        "runtime": {
+          "PetShopDal.dll": {}
+        }
+      },
+      "PetShopDomain/1.0.0": {
+        "runtime": {
+          "PetShopDomain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PetShopService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetShopDal/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetShopDomain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

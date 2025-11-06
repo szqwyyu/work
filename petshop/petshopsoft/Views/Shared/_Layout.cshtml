@@ -1,0 +1,109 @@
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - PetShop — каталог товаров для питомцев</title>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/css/shared.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/popup.css" asp-append-version="true" />
+
+    <meta name="description" content="PetShop — каталог товаров для домашних питомцев: еда, игрушки, аксессуары и уход." />
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container header-top-inner">
+                <div class="logo">
+                    <a asp-area="" asp-controller="Home" asp-action="SiteInformation">
+                        <span class="logo-main">PetShop</span>
+                        <small class="logo-sub">каталог товаров для питомцев</small>
+                    </a>
+                </div>
+                <button class="btn btn-outline-primary" onclick="openLoginPopup()">Войти</button>
+                <button class="btn btn-outline-secondary" onclick="openRegisterPopup()">Регистрация</button>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container header-bottom-inner">
+                <nav class="main-nav" role="navigation" aria-label="Главное меню">
+                    <ul class="nav-list">
+                        <li><a asp-area="" asp-controller="Catalog" asp-action="Index">Каталог</a></li>
+                        <li><a asp-controller="Home" asp-action="Index">О нас</a></li>
+                        <li><a asp-controller="Home" asp-action="Services">Услуги</a></li>
+                        <li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <form asp-area="" asp-controller="Catalog" asp-action="Search" method="get" class="search-form">
+                        <input type="search" name="q" placeholder="Поиск товаров для питомцев..." aria-label="Поиск по каталогу" />
+                        <button type="submit" class="btn-icon" aria-label="Искать">🔍</button>
+                    </form>
+
+                    <button id="side-menu-button-click-to-hide" class="hamburger" aria-label="Открыть меню">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- Футер -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <h4>PetShop</h4>
+                <p>Каталог товаров для домашних питомцев: корма, игрушки, аксессуары и многое другое.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Навигация</h5>
+                <ul>
+                    <li><a asp-controller="Catalog" asp-action="Index">Каталог</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">О нас</a></li>
+                    <li><a asp-controller="Home" asp-action="Services">Услуги</a></li>
+                    <li><a asp-controller="Home" asp-action="Contacts">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Контакты</h5>
+                <address>
+                    г. Тирасполь<br />
+                    E-mail: info@petshop.local<br />
+                    Телефон: +373 (533) 12-345
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© @(DateTime.Now.Year) PetShop — Все права защищены</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Всплывающее окно логина и регистрации -->
+    @await Html.PartialAsync("_LoginPopup")
+
+    <!-- JS -->
+    <script src="~/js/shared_script.js" asp-append-version="true"></script>
+    <script src="~/js/login_and_registration_script.js" asp-append-version="true"></script>
+    <script src="~/js/home_script.js" asp-append-version="true"></script>
+</body>
+</html>
