@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "PetShopDal/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "PetShopDomain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PetShopDal.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetShopDal.dll": {}
+        }
+      },
+      "PetShopDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/PetShopDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetShopDomain.dll": {}
+        }
+      },
+      "PetShopService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "PetShopDal": "1.0.0",
+          "PetShopDomain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PetShopService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetShopService.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PetShopDal/1.0.0": {
+      "type": "project",
+      "path": "../petshopDal/PetShopDal.csproj",
+      "msbuildProject": "../petshopDal/PetShopDal.csproj"
+    },
+    "PetShopDomain/1.0.0": {
+      "type": "project",
+      "path": "../petshopDomain/PetShopDomain.csproj",
+      "msbuildProject": "../petshopDomain/PetShopDomain.csproj"
+    },
+    "PetShopService/1.0.0": {
+      "type": "project",
+      "path": "../petshopService/PetShopService.csproj",
+      "msbuildProject": "../petshopService/PetShopService.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "PetShopService >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\genav\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopsoft\\PetShopSoft.csproj",
+      "projectName": "PetShopSoft",
+      "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopsoft\\PetShopSoft.csproj",
+      "packagesPath": "C:\\Users\\genav\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopsoft\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\genav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopService\\PetShopService.csproj": {
+              "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopService\\PetShopService.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

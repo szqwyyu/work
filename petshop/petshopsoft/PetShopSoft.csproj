@@ -8,4 +8,8 @@
     <ProjectReference Include="..\petshopService\PetShopService.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Account\" />
+  </ItemGroup>
+
 </Project>

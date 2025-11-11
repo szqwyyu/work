@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDal\\PetShopDal.csproj": {}
+    "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDal\\PetShopDal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDal\\PetShopDal.csproj": {
+    "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDal\\PetShopDal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDal\\PetShopDal.csproj",
+        "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDal\\PetShopDal.csproj",
         "projectName": "PetShopDal",
-        "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDal\\PetShopDal.csproj",
+        "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDal\\PetShopDal.csproj",
         "packagesPath": "C:\\Users\\genav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDal\\obj\\",
+        "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\genav\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\PetShopDomain.csproj": {
-                "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\PetShopDomain.csproj"
+              "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\PetShopDomain.csproj": {
+                "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\PetShopDomain.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\PetShopDomain.csproj": {
+    "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\PetShopDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\PetShopDomain.csproj",
+        "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\PetShopDomain.csproj",
         "projectName": "PetShopDomain",
-        "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\PetShopDomain.csproj",
+        "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\PetShopDomain.csproj",
         "packagesPath": "C:\\Users\\genav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\obj\\",
+        "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\genav\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,126 @@
+﻿:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+    .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: var(--primary-color);
+    }
+
+.product-card, .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+    .product-card:hover, .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    .product-card img, .service-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+.service-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contact-info {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: transform 0.3s ease;
+}
+
+    .contact-info:hover {
+        transform: translateY(-3px);
+    }
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+    .social-links a:hover {
+        color: var(--primary-color) !important;
+    }
+
+.btn {
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+    .btn-primary:hover {
+        background: #3a5ccc;
+        border-color: #3a5ccc;
+        transform: translateY(-2px);
+    }
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+    }
+
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+.badge {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    border-radius: 20px;
+}

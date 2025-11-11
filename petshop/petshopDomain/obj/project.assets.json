@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\PetShopDomain.csproj",
+      "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\PetShopDomain.csproj",
       "projectName": "PetShopDomain",
-      "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\PetShopDomain.csproj",
+      "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\PetShopDomain.csproj",
       "packagesPath": "C:\\Users\\genav\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\petshop\\petshopDomain\\obj\\",
+      "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\work\\petshop\\petshopDomain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\genav\\AppData\\Roaming\\NuGet\\NuGet.Config",

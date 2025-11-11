@@ -28,8 +28,12 @@
                         <small class="logo-sub">каталог товаров для питомцев</small>
                     </a>
                 </div>
-                <button class="btn btn-outline-primary" onclick="openLoginPopup()">Войти</button>
-                <button class="btn btn-outline-secondary" onclick="openRegisterPopup()">Регистрация</button>
+
+                <!-- Кнопки входа и регистрации -->
+                <div class="header-auth-buttons">
+                    <button class="btn btn-outline-primary" onclick="openLoginPopup()">Войти</button>
+                    <button class="btn btn-outline-secondary" onclick="openRegisterPopup()">Регистрация</button>
+                </div>
             </div>
         </div>
 
@@ -103,7 +107,7 @@
 
     <!-- JS -->
     <script src="~/js/shared_script.js" asp-append-version="true"></script>
-    <script src="~/js/login_and_registration_script.js" asp-append-version="true"></script>
     <script src="~/js/home_script.js" asp-append-version="true"></script>
+    <script src="~/js/login_and_registration_script.js" asp-append-version="true"></script>
 </body>
 </html>

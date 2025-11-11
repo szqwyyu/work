@@ -1,24 +1,30 @@
 ﻿function openLoginPopup() {
-    document.getElementById("loginPopup").classList.remove("d-none");
+    const overlay = document.getElementById("authPopup");
+    overlay.classList.remove("d-none");
+    document.getElementById("loginPopup").classList.add("active");
+    document.getElementById("registerPopup").classList.remove("active");
 }
 
 function openRegisterPopup() {
-    document.getElementById("registerPopup").classList.remove("d-none");
+    const overlay = document.getElementById("authPopup");
+    overlay.classList.remove("d-none");
+    document.getElementById("registerPopup").classList.add("active");
+    document.getElementById("loginPopup").classList.remove("active");
 }
 
 function closePopup() {
-    document.getElementById("loginPopup").classList.add("d-none");
-    document.getElementById("registerPopup").classList.add("d-none");
+    const overlay = document.getElementById("authPopup");
+    overlay.classList.add("d-none");
 }
 
 function switchToRegister(e) {
     e.preventDefault();
-    document.getElementById("loginPopup").classList.add("d-none");
-    document.getElementById("registerPopup").classList.remove("d-none");
+    document.getElementById("loginPopup").classList.remove("active");
+    document.getElementById("registerPopup").classList.add("active");
 }
 
 function switchToLogin(e) {
     e.preventDefault();
-    document.getElementById("registerPopup").classList.add("d-none");
-    document.getElementById("loginPopup").classList.remove("d-none");
+    document.getElementById("registerPopup").classList.remove("active");
+    document.getElementById("loginPopup").classList.add("active");
 }

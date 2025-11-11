@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Контакты";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="text-center mb-4">Свяжитесь с нами</h1>
+
+            <div class="row mb-5">
+                <div class="col-md-4 text-center">
+                    <div class="contact-info">
+                        <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                        <h5>Телефон</h5>
+                        <p>+7 (999) 123-45-67</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="contact-info">
+                        <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                        <h5>Email</h5>
+                        <p>info@petshop.ru</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                        <h5>Адрес</h5>
+                        <p>г. Москва, ул. Пушкина, д. 1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow">
+                <div class="card-body p-4">
+                    <h4 class="card-title mb-4">Напишите нам</h4>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Имя *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i>Отправить сообщение
+                        </button>
+                    </form>
+                    <div id="formMessage" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const response = await fetch('/Home/Contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                const messageDiv = document.getElementById('formMessage');
+
+                if (result.success) {
+                    messageDiv.innerHTML = `<div class="alert alert-success">${result.message}</div>`;
+                    document.getElementById('contactForm').reset();
+                } else {
+                    messageDiv.innerHTML = `<div class="alert alert-danger">${result.message}</div>`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('formMessage').innerHTML =
+                    '<div class="alert alert-danger">Произошла ошибка при отправке сообщения.</div>';
+            }
+        });
+</script>
+}
