@@ -1,0 +1,693 @@
+﻿@{
+    ViewData["Title"] = "Контакты - Зоомагазин Питомец";
+}
+
+<style>
+    .contact-section {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><path fill="white" d="M500,250c138,0,250,112,250,250S638,750,500,750S250,638,250,500S362,250,500,250z M500,200c-165,0-300,135-300,300 s135,300,300,300s300-135,300-300S665,200,500,200L500,200z"/></svg>') repeat;
+        }
+
+    .contact-hero {
+        text-align: center;
+        margin-bottom: 4rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .contact-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .contact-subtitle {
+        font-size: 1.3rem;
+        color: rgba(255,255,255,0.9);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .contact-container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .contact-info-sidebar {
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 25px;
+        padding: 3rem;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .contact-form-card {
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 25px;
+        padding: 3rem;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .contact-method {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
+        background: rgba(102, 126, 234, 0.05);
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+    }
+
+        .contact-method:hover {
+            transform: translateY(-5px);
+            background: rgba(102, 126, 234, 0.1);
+            border-color: rgba(102, 126, 234, 0.2);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+        }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.5rem;
+        color: white;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .contact-details {
+        flex: 1;
+    }
+
+    .contact-method-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-text {
+        color: #6c757d;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-link {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+        .contact-link:hover {
+            color: #764ba2;
+        }
+
+    .working-hours {
+        background: rgba(40, 167, 69, 0.05);
+        border-radius: 20px;
+        padding: 2rem;
+        margin-top: 2rem;
+        border: 1px solid rgba(40, 167, 69, 0.1);
+    }
+
+    .hours-title {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+        .hours-title i {
+            color: #28a745;
+        }
+
+    .hours-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-size: 1rem;
+        }
+
+            .hours-list li:last-child {
+                border-bottom: none;
+            }
+
+        .hours-list .day {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .hours-list .time {
+            color: #28a745;
+            font-weight: 500;
+        }
+
+    .form-group {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .form-label {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 15px;
+        padding: 15px 20px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: rgba(255,255,255,0.8);
+        font-family: inherit;
+    }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.3rem rgba(102, 126, 234, 0.15);
+            background: white;
+            transform: translateY(-2px);
+        }
+
+    textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .btn-send {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 18px 40px;
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .btn-send::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-send:hover::before {
+            left: 100%;
+        }
+
+        .btn-send:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-send:active {
+            transform: translateY(-1px);
+        }
+
+    .social-contact {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+        .social-contact a {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .social-contact a::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                transition: left 0.5s;
+            }
+
+            .social-contact a:hover::before {
+                left: 100%;
+            }
+
+            .social-contact a:hover {
+                transform: translateY(-5px) scale(1.1);
+                box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            }
+
+    .map-section {
+        margin-top: 4rem;
+    }
+
+    .map-container {
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        height: 450px;
+        position: relative;
+    }
+
+    .map-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        filter: saturate(1.1) contrast(1.1);
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255,255,255,0.8);
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    /* Анимации */
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* Индикатор загрузки */
+    .btn-send.loading {
+        position: relative;
+        color: transparent;
+    }
+
+        .btn-send.loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            border: 3px solid transparent;
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+    @@keyframes spin {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    /* Адаптивность */
+    @@media (max-width: 992px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .contact-title {
+            font-size: 2.8rem;
+        }
+
+        .contact-info-sidebar,
+        .contact-form-card {
+            padding: 2rem;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .contact-title {
+            font-size: 2.3rem;
+        }
+
+        .contact-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .contact-method {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .contact-icon {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        .social-contact {
+            flex-wrap: wrap;
+        }
+    }
+</style>
+
+<section class="contact-section">
+    <div class="container contact-container">
+        <!-- Заголовок -->
+        <div class="contact-hero animate-fade-in">
+            <h1 class="contact-title">Свяжитесь с нами</h1>
+            <p class="contact-subtitle">
+                Мы всегда на связи и готовы помочь вам и вашим питомцам.
+                Не стесняйтесь обращаться к нам любым удобным способом!
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Боковая панель с контактами -->
+            <div class="contact-info-sidebar animate-fade-in" style="animation-delay: 0.2s">
+                <h2 class="section-title" style="color: #2c3e50; font-size: 1.8rem;">Наши контакты</h2>
+
+                <!-- Телефон -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 class="contact-method-title">Телефон</h3>
+                        <p class="contact-text">Позвоните нам для консультации</p>
+                        <a href="tel:+79991234567" class="contact-link">+7 (999) 123-45-67</a>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 class="contact-method-title">Email</h3>
+                        <p class="contact-text">Напишите нам на почту</p>
+                        <a href="mailto:info@petshop.ru" class="contact-link">info@petshop.ru</a>
+                    </div>
+                </div>
+
+                <!-- Адрес -->
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 class="contact-method-title">Адрес</h3>
+                        <p class="contact-text">Приходите к нам в гости</p>
+                        <p class="contact-text" style="font-weight: 600; color: #2c3e50;">
+                            г. Москва, ул. Пушкина, д. 1
+                        </p>
+                        <p class="contact-text" style="font-size: 0.9rem;">
+                            🚇 Ближайшее метро: Тверская<br>
+                            🅿️ Бесплатная парковка для клиентов
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Часы работы -->
+                <div class="working-hours">
+                    <h3 class="hours-title">
+                        <i class="fas fa-clock"></i>
+                        Часы работы
+                    </h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Понедельник - Пятница</span>
+                            <span class="time">9:00 - 21:00</span>
+                        </li>
+                        <li>
+                            <span class="day">Суббота</span>
+                            <span class="time">10:00 - 20:00</span>
+                        </li>
+                        <li>
+                            <span class="day">Воскресенье</span>
+                            <span class="time">10:00 - 19:00</span>
+                        </li>
+                        <li>
+                            <span class="day" style="color: #28a745;">Без перерывов</span>
+                            <span class="time" style="color: #28a745;">✅</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Форма обратной связи -->
+            <div class="contact-form-card animate-fade-in" style="animation-delay: 0.4s">
+                <h2 class="section-title" style="color: #2c3e50; font-size: 1.8rem; margin-bottom: 2rem;">Напишите нам</h2>
+
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    <i class="fas fa-user"></i>Ваше имя *
+                                </label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Иван Иванов" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope"></i>Email *
+                                </label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="ivan@example.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">
+                            <i class="fas fa-tag"></i>Тема сообщения
+                        </label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Например: Консультация по кормам">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            <i class="fas fa-comment"></i>Сообщение *
+                        </label>
+                        <textarea class="form-control" id="message" name="message" rows="6"
+                                  placeholder="Расскажите, чем мы можем вам помочь..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-send">
+                        <i class="fas fa-paper-plane me-2"></i>Отправить сообщение
+                    </button>
+                </form>
+
+                <div id="formMessage" class="mt-3"></div>
+
+                <!-- Соцсети -->
+                <div class="social-contact">
+                    <a href="#" title="ВКонтакте">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карта -->
+        <div class="map-section animate-fade-in" style="animation-delay: 0.6s">
+            <h2 class="section-title">Мы на карте</h2>
+            <p class="section-subtitle">Приезжайте к нам в гости - мы вас ждём!</p>
+
+            <div class="map-container">
+                <div class="map-overlay"></div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373789919258!2d37.61763331593047!3d55.755826680553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b1a5a7c7f%3A0x8d8c7f5f5f5f5f5f!2z0YPQuy4g0J_Rg9GI0LrQvtCy0LAsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGP!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+
+            contactForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                // Показываем индикатор загрузки
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '';
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+
+                try {
+                    const response = await fetch('/Home/Contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        formMessage.innerHTML = `<div class="alert alert-success" style="border-radius: 15px; padding: 1.5rem;">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <strong>Успешно!</strong> ${result.message}
+                            </div>`;
+                        contactForm.reset();
+                    } else {
+                        formMessage.innerHTML = `<div class="alert alert-danger" style="border-radius: 15px; padding: 1.5rem;">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                <strong>Ошибка!</strong> ${result.message}
+                            </div>`;
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    formMessage.innerHTML = `<div class="alert alert-danger" style="border-radius: 15px; padding: 1.5rem;">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            <strong>Ошибка!</strong> Произошла ошибка при отправке сообщения. Попробуйте ещё раз.
+                        </div>`;
+                } finally {
+                    // Восстанавливаем кнопку
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+
+                    // Автоматически скрываем сообщение через 5 секунд
+                    setTimeout(() => {
+                        formMessage.innerHTML = '';
+                    }, 5000);
+                }
+            });
+
+            // Анимация появления элементов
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+            animateElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = `opacity 0.8s ease ${index * 0.2}s, transform 0.8s ease ${index * 0.2}s`;
+
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+}

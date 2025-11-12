@@ -1,0 +1,181 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Service\\kat_mob_soft.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.DAL\\kat_mob_soft.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.DAL\\kat_mob_soft.DAL.csproj",
+        "projectName": "kat_mob_soft.DAL",
+        "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.DAL\\kat_mob_soft.DAL.csproj",
+        "packagesPath": "C:\\Users\\genav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\genav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Domain\\PetShopDomain.csproj": {
+                "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Domain\\PetShopDomain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Domain\\PetShopDomain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Domain\\PetShopDomain.csproj",
+        "projectName": "PetShopDomain",
+        "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Domain\\PetShopDomain.csproj",
+        "packagesPath": "C:\\Users\\genav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\genav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Service\\kat_mob_soft.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Service\\kat_mob_soft.Service.csproj",
+        "projectName": "kat_mob_soft.Service",
+        "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Service\\kat_mob_soft.Service.csproj",
+        "packagesPath": "C:\\Users\\genav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\genav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.DAL\\kat_mob_soft.DAL.csproj": {
+                "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.DAL\\kat_mob_soft.DAL.csproj"
+              },
+              "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Domain\\PetShopDomain.csproj": {
+                "projectPath": "C:\\Users\\genav\\OneDrive\\Desktop\\kat_mob_soft-main\\kat_mob_soft.Domain\\PetShopDomain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

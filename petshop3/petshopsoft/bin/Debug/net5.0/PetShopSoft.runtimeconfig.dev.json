@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\genav\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\genav\\.nuget\\packages"
+    ]
+  }
+}
