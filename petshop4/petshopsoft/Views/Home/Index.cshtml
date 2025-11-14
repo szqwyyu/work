@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="hero-section bg-light py-5 mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-primary">Забота о ваших питомцах</h1>
+                <p class="lead">Лучшие товары и услуги для ваших домашних любимцев. Качество, которому можно доверять.</p>
+                <a href="/Products" class="btn btn-primary btn-lg me-2">Товары</a>
+                <a href="/Services" class="btn btn-outline-primary btn-lg">Услуги</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="/images/hero-pets.jpg" alt="Домашние питомцы" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h2 class="section-title">Популярные товары</h2>
+            <p class="text-muted">То, что нужно вашим питомцам</p>
+        </div>
+    </div>
+
+    <div class="row" id="featured-products">
+        @foreach (var product in ViewBag.FeaturedProducts)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card product-card h-100">
+                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h5 text-primary">@product.Price.ToString("C")</span>
+                            <button class="btn btn-outline-primary">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <h2 class="section-title">Наши услуги</h2>
+            <p class="text-muted">Профессиональный уход для ваших питомцев</p>
+        </div>
+    </div>
+
+    <div class="row" id="services-section">
+        @foreach (var service in ViewBag.Services)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card service-card h-100">
+                    <img src="@service.ImageUrl" class="card-img-top" alt="@service.Title">
+                    <div class="card-body">
+                        <h5 class="card-title">@service.Title</h5>
+                        <p class="card-text">@service.Description</p>
+                        <div class="service-meta">
+                            <span class="badge bg-primary">@service.Duration мин</span>
+                            <span class="h5 text-primary float-end">@service.Price.ToString("C")</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

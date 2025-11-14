@@ -1,0 +1,745 @@
+﻿@{
+    ViewData["Title"] = "PetCare — Наши услуги";
+}
+
+<style>
+    :root {
+        --primary: #6a5af9;
+        --secondary: #d66efd;
+        --accent: #ff7eb3;
+        --light: #f8f9fa;
+        --dark: #2c3e50;
+        --text: #5a6c7d;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text);
+        overflow-x: hidden;
+    }
+
+    .services-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f0f4ff 0%, #f9f0ff 100%);
+        position: relative;
+    }
+
+        .services-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+
+    .section-title {
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1.5rem;
+        position: relative;
+        letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--text);
+        max-width: 600px;
+        margin: 0 auto 4rem;
+        line-height: 1.6;
+    }
+
+    .services-wrapper {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 80px;
+    }
+
+    .services-track {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 40px 20px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+        .services-track::-webkit-scrollbar {
+            display: none;
+        }
+
+    .service-card {
+        flex: 0 0 380px;
+        background: white;
+        border-radius: 24px;
+        padding: 0;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: none;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            z-index: 2;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+
+    .service-img-container {
+        position: relative;
+        overflow: hidden;
+        height: 240px;
+    }
+
+    .service-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-img {
+        transform: scale(1.1);
+    }
+
+    .service-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: var(--primary);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .service-card-content {
+        padding: 30px;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+
+    .service-desc {
+        color: var(--text);
+        line-height: 1.6;
+        margin-bottom: 25px;
+        font-size: 1rem;
+    }
+
+    .service-features {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .service-price {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        box-shadow: 0 5px 15px rgba(106, 90, 249, 0.3);
+    }
+
+    .service-badge {
+        background: #e3f2fd;
+        color: #1976d2;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    .btn-service {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        box-shadow: 0 5px 15px rgba(106, 90, 249, 0.3);
+    }
+
+        .btn-service:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        border: none;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .arrow:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+    .service-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e9ecef;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-value {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--primary);
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+        color: var(--text);
+    }
+
+    <text >
+    /* Анимации */
+    @@keyframes fadeInUp {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    </text >
+
+    .service-card {
+        animation: fadeInUp 0.7s ease forwards;
+        opacity: 0;
+    }
+
+    .service-card:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .service-card:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .service-card:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .service-card:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .service-card:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .service-card:nth-child(6) {
+        animation-delay: 0.6s;
+    }
+
+    /* Дополнительные декоративные элементы */
+    .floating-element {
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        opacity: 0.05;
+        z-index: 0;
+    }
+
+    .floating-1 {
+        width: 200px;
+        height: 200px;
+        top: 10%;
+        left: 5%;
+    }
+
+    .floating-2 {
+        width: 150px;
+        height: 150px;
+        bottom: 15%;
+        right: 8%;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-top: 60px;
+        padding-top: 40px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .contact-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 20px;
+    }
+
+    .contact-phone {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: var(--light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+    /* Адаптивность */
+    @@media (max-width: 1200px) {
+        .services-wrapper {
+            padding: 0 60px;
+        }
+    }
+
+    @@media (max-width: 992px) {
+        .services-wrapper {
+            padding: 0 40px;
+        }
+
+        .service-card {
+            flex: 0 0 340px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .services-wrapper {
+            padding: 0 30px;
+        }
+
+        .service-card {
+            flex: 0 0 300px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+        }
+
+        .arrow {
+            width: 50px;
+            height: 50px;
+            font-size: 1.3rem;
+        }
+    }
+
+    @@media (max-width: 576px) {
+        .services-wrapper {
+            padding: 0 20px;
+        }
+
+        .service-card {
+            flex: 0 0 280px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+        }
+
+        .services-section {
+            padding: 60px 0;
+        }
+    }
+</style>
+
+<main class="container-fluid px-0">
+    <section id="services" class="section services-section">
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+
+        <div class="container position-relative">
+            <h2 class="section-title">Наши услуги</h2>
+            <p class="section-subtitle">Профессиональный уход и забота для ваших питомцев. Мы делаем их жизнь счастливой и здоровой.</p>
+
+            <div class="services-wrapper">
+                <button class="arrow left" id="services-left" aria-label="Влево">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="services-track" id="services-track" role="list">
+                    <!-- 1 -->
+                    <article class="service-card" role="listitem">
+                        <div class="service-img-container">
+                            <img src="/images/grooming.jpg" alt="Груминг и гигиена" class="service-img" />
+                            <div class="service-icon">
+                                <i class="fas fa-paw"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-title">Груминг и гигиена</h3>
+                            <p class="service-desc">Профессиональный уход за шерстью, стрижка когтей, чистка ушей и зубов. Ваш питомец будет выглядеть и чувствовать себя прекрасно.</p>
+                            <div class="service-features">
+                                <span class="service-price">от 1200 ₽</span>
+                                <span class="service-badge">Популярно</span>
+                            </div>
+                            <a href="#" class="btn-service">
+                                <i class="fas fa-calendar-check"></i> Записаться
+                            </a>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">30+</div>
+                                    <div class="stat-label">мастеров</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">4.9</div>
+                                    <div class="stat-label">рейтинг</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">15 мин</div>
+                                    <div class="stat-label">запись</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2 -->
+                    <article class="service-card" role="listitem">
+                        <div class="service-img-container">
+                            <img src="/images/veterinary.jpg" alt="Ветеринарная помощь" class="service-img" />
+                            <div class="service-icon">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-title">Ветеринарная помощь</h3>
+                            <p class="service-desc">Консультации, вакцинация, диагностика и лечение. Опытные ветеринары позаботятся о здоровье вашего питомца.</p>
+                            <div class="service-features">
+                                <span class="service-price">от 800 ₽</span>
+                                <span class="service-badge">Срочно</span>
+                            </div>
+                            <a href="#" class="btn-service">
+                                <i class="fas fa-phone-alt"></i> Позвонить
+                            </a>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">24/7</div>
+                                    <div class="stat-label">приём</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">10</div>
+                                    <div class="stat-label">ветеринаров</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">1 час</div>
+                                    <div class="stat-label">ожидание</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 3 -->
+                    <article class="service-card" role="listitem">
+                        <div class="service-img-container">
+                            <img src="/images/training.jpg" alt="Дрессировка" class="service-img" />
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-title">Дрессировка</h3>
+                            <p class="service-desc">Обучение командам, коррекция поведения, социализация. Профессиональные кинологи помогут воспитать послушного питомца.</p>
+                            <div class="service-features">
+                                <span class="service-price">от 1500 ₽</span>
+                                <span class="service-badge">Эффективно</span>
+                            </div>
+                            <a href="#" class="btn-service">
+                                <i class="fas fa-book-open"></i> Узнать больше
+                            </a>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">8</div>
+                                    <div class="stat-label">курсов</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">95%</div>
+                                    <div class="stat-label">успех</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">5</div>
+                                    <div class="stat-label">кинологов</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 4 -->
+                    <article class="service-card" role="listitem">
+                        <div class="service-img-container">
+                            <img src="/images/hotel.jpg" alt="Передержка" class="service-img" />
+                            <div class="service-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-title">Передержка и отель</h3>
+                            <p class="service-desc">Комфортные условия для временного проживания питомцев. Круглосуточный присмотр, прогулки и индивидуальный уход.</p>
+                            <div class="service-features">
+                                <span class="service-price">от 500 ₽/день</span>
+                                <span class="service-badge">Безопасно</span>
+                            </div>
+                            <a href="#" class="btn-service">
+                                <i class="fas fa-bed"></i> Забронировать
+                            </a>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">24</div>
+                                    <div class="stat-label">места</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">3</div>
+                                    <div class="stat-label">выгула/день</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">10</div>
+                                    <div class="stat-label">сотрудников</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 5 -->
+                    <article class="service-card" role="listitem">
+                        <div class="service-img-container">
+                            <img src="/images/walking.jpg" alt="Выгул собак" class="service-img" />
+                            <div class="service-icon">
+                                <i class="fas fa-walking"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-title">Выгул собак</h3>
+                            <p class="service-desc">Регулярные прогулки в удобное для вас время. Активные игры и социализация с другими собаками под присмотром опытных выгульщиков.</p>
+                            <div class="service-features">
+                                <span class="service-price">от 400 ₽</span>
+                                <span class="service-badge">Активно</span>
+                            </div>
+                            <a href="#" class="btn-service">
+                                <i class="fas fa-dog"></i> Заказать выгул
+                            </a>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">15</div>
+                                    <div class="stat-label">выгульщиков</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">60+</div>
+                                    <div class="stat-label">клиентов</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">5.0</div>
+                                    <div class="stat-label">рейтинг</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 6 -->
+                    <article class="service-card" role="listitem">
+                        <div class="service-img-container">
+                            <img src="/images/consultation.jpg" alt="Консультации" class="service-img" />
+                            <div class="service-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-content">
+                            <h3 class="service-title">Консультации</h3>
+                            <p class="service-desc">Профессиональные консультации по питанию, содержанию, воспитанию и здоровью питомцев. Онлайн и офлайн форматы.</p>
+                            <div class="service-features">
+                                <span class="service-price">от 600 ₽</span>
+                                <span class="service-badge">Экспертно</span>
+                            </div>
+                            <a href="#" class="btn-service">
+                                <i class="fas fa-user-check"></i> Задать вопрос
+                            </a>
+                            <div class="service-stats">
+                                <div class="stat">
+                                    <div class="stat-value">12</div>
+                                    <div class="stat-label">экспертов</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">100+</div>
+                                    <div class="stat-label">тем</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">30 мин</div>
+                                    <div class="stat-label">длительность</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="arrow right" id="services-right" aria-label="Вправо">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="contact-info">
+                <h3 class="contact-title">Свяжитесь с нами</h3>
+                <a href="tel:+7091325687" class="contact-phone">+7 (091) 325-68-7</a>
+                <p>Работаем ежедневно с 8:00 до 22:00</p>
+
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.getElementById('services-track');
+            const leftBtn = document.getElementById('services-left');
+            const rightBtn = document.getElementById('services-right');
+            const cardWidth = 380 + 30; // width + gap
+
+            leftBtn.addEventListener('click', () => {
+                track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            });
+
+            rightBtn.addEventListener('click', () => {
+                track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            });
+
+            // Автоматическая прокрутка каждые 6 секунд
+            let autoScroll = setInterval(() => {
+                if (track.scrollLeft + track.clientWidth >= track.scrollWidth) {
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                }
+            }, 6000);
+
+            // Остановка автоматической прокрутки при взаимодействии пользователя
+            track.addEventListener('mouseenter', () => {
+                clearInterval(autoScroll);
+            });
+
+            track.addEventListener('mouseleave', () => {
+                autoScroll = setInterval(() => {
+                    if (track.scrollLeft + track.clientWidth >= track.scrollWidth) {
+                        track.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                    }
+                }, 6000);
+            });
+        });
+    </script>
+}

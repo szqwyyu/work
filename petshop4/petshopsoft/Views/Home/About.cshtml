@@ -1,0 +1,295 @@
+﻿@{
+    ViewData["Title"] = "О нас - Зоомагазин Питомец";
+}
+
+<style>
+    .about-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .about-hero {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .about-title {
+        font-size: 3rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.3rem;
+        color: #6c757d;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .mission-card {
+        background: white;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .mission-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 2rem;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .mission-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+
+    .mission-text {
+        color: #6c757d;
+        line-height: 1.7;
+        font-size: 1.1rem;
+    }
+
+    .values-section {
+        margin: 4rem 0;
+    }
+
+    .value-item {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .value-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .value-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+
+    .value-description {
+        color: #6c757d;
+        line-height: 1.6;
+    }
+
+    .team-section {
+        margin: 4rem 0;
+    }
+
+    .team-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+    .team-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1.5rem;
+        border: 4px solid #667eea;
+    }
+
+    .team-name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+
+    .team-position {
+        color: #667eea;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .team-description {
+        color: #6c757d;
+        line-height: 1.6;
+    }
+
+    .stats-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 4rem 0;
+        border-radius: 20px;
+        margin: 4rem 0;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+</style>
+
+<section class="about-section">
+    <div class="container">
+        <!-- Заголовок -->
+        <div class="about-hero">
+            <h1 class="about-title">О нашем зоомагазине</h1>
+            <p class="about-subtitle">
+                Мы - команда энтузиастов, которая искренне любит животных и заботится о их благополучии.
+                Наша миссия - сделать жизнь ваших питомцев счастливой и здоровой.
+            </p>
+        </div>
+
+        <!-- Миссия -->
+        <div class="mission-card">
+            <div class="mission-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="mission-title">Наша миссия</h2>
+            <p class="mission-text">
+                Мы стремимся предоставить все необходимое для комфортной и счастливой жизни ваших домашних любимцев.
+                От качественных кормов до профессиональных услуг - всё, что нужно для заботы о ваших питомцах,
+                вы найдете в нашем магазине. Мы тщательно отбираем каждый товар и гарантируем его качество.
+            </p>
+        </div>
+
+        <!-- Ценности -->
+        <div class="values-section">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Наши ценности</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="value-title">Качество</h3>
+                    <p class="value-description">
+                        Все товары проходят строгий контроль качества и имеют необходимые сертификаты
+                    </p>
+                </div>
+                <div class="col-md-4 value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="value-title">Забота</h3>
+                    <p class="value-description">
+                        Мы относимся к каждому питомцу как к своему собственному и заботимся о его благополучии
+                    </p>
+                </div>
+                <div class="col-md-4 value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="value-title">Сообщество</h3>
+                    <p class="value-description">
+                        Создаем сообщество ответственных владельцев животных, готовых делиться опытом
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Статистика -->
+        <div class="stats-section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Лет на рынке</div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">Довольных клиентов</div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Товаров в ассортименте</div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Поддержка клиентов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Команда -->
+        <div class="team-section">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Наша команда</h2>
+                    <p class="section-subtitle">Профессионалы, которые любят свое дело</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="team-card">
+                        <img src="/images/team1.jpg" alt="Анна Петрова" class="team-photo">
+                        <h3 class="team-name">Анна Петрова</h3>
+                        <div class="team-position">Ветеринарный врач</div>
+                        <p class="team-description">
+                            Опытный специалист с 10-летним стажем. Консультирует по вопросам здоровья и ухода за питомцами.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="team-card">
+                        <img src="/images/team2.jpg" alt="Иван Сидоров" class="team-photo">
+                        <h3 class="team-name">Иван Сидоров</h3>
+                        <div class="team-position">Грумер</div>
+                        <p class="team-description">
+                            Профессиональный грумер с художественным образованием. Создает стильные стрижки для ваших питомцев.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="team-card">
+                        <img src="/images/team3.jpg" alt="Мария Иванова" class="team-photo">
+                        <h3 class="team-name">Мария Иванова</h3>
+                        <div class="team-position">Менеджер по продуктам</div>
+                        <p class="team-description">
+                            Отбирает только лучшие товары для наших клиентов. Знает всё о качестве кормов и аксессуаров.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

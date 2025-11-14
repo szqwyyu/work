@@ -1,0 +1,779 @@
+﻿/* Основные стили для сайта PetShop */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --text-muted: #6c757d;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+}
+
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Герой секция */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.1"><path fill="white" d="M500,250c138,0,250,112,250,250S638,750,500,750S250,638,250,500S362,250,500,250z M500,200c-165,0-300,135-300,300 s135,300,300,300s300-135,300-300S665,200,500,200L500,200z"/></svg>') repeat;
+    }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.btn-hero {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.btn-hero-primary {
+    background: white;
+    color: var(--primary-color);
+}
+
+.btn-hero-outline {
+    background: transparent;
+    color: white;
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Секции и заголовки */
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    position: relative;
+}
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        border-radius: 2px;
+    }
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 4rem;
+}
+
+/* Карточки товаров и услуг */
+.product-card, .service-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: none;
+    height: 100%;
+}
+
+    .product-card:hover, .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top,
+.service-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.btn-card {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+    .btn-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        color: white;
+    }
+
+/* Секция преимуществ */
+.features-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 100px 0;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Секция статистики */
+.stats-section {
+    background: var(--dark-color);
+    color: white;
+    padding: 80px 0;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Секция призыва к действию */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.btn-cta {
+    background: white;
+    color: var(--primary-color);
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+    .btn-cta:hover {
+        background: transparent;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+/* Навигация */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-dark.bg-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+    .nav-link:hover {
+        color: rgba(255,255,255,0.8) !important;
+    }
+
+/* Футер */
+footer {
+    background: var(--dark-color) !important;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+    .social-links a:hover {
+        color: var(--primary-color) !important;
+    }
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Формы */
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    }
+
+.btn {
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-color: var(--primary-color);
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        border-color: #5a6fd8;
+        transform: translateY(-2px);
+    }
+
+/* Утилиты */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .btn-hero, .btn-cta {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .feature-item {
+        padding: 1rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+}
+/* Стили для модального окна входа */
+.login-modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+    .login-modal-content .modal-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 2rem 2rem 1rem 2rem;
+        position: relative;
+    }
+
+        .login-modal-content .modal-header .brand-logo i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .login-modal-content .modal-header .btn-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            opacity: 1;
+            padding: 0.5rem;
+        }
+
+            .login-modal-content .modal-header .btn-close:hover {
+                background: rgba(255,255,255,0.3);
+            }
+
+    .login-modal-content .modal-body {
+        padding: 2rem;
+    }
+
+    .login-modal-content .modal-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #2c3e50;
+    }
+
+    .login-modal-content .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .login-modal-content .form-label {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .login-modal-content .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 12px 16px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+        .login-modal-content .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+        }
+
+    .login-modal-content .password-container {
+        position: relative;
+    }
+
+    .login-modal-content .password-toggle {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #6c757d;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .login-modal-content .form-options {
+        font-size: 0.9rem;
+    }
+
+    .login-modal-content .form-check-input:checked {
+        background-color: #667eea;
+        border-color: #667eea;
+    }
+
+    .login-modal-content .forgot-password {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .login-modal-content .forgot-password:hover {
+            color: #764ba2;
+        }
+
+    .login-modal-content .btn-login {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+
+        .login-modal-content .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .login-modal-content .btn-login:active {
+            transform: translateY(0);
+        }
+
+    .login-modal-content .login-divider {
+        position: relative;
+        text-align: center;
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+        .login-modal-content .login-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e9ecef;
+        }
+
+        .login-modal-content .login-divider span {
+            background: white;
+            padding: 0 1rem;
+        }
+
+    .login-modal-content .register-text {
+        color: #6c757d;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+/* Индикатор загрузки */
+.btn-login.loading {
+    position: relative;
+    color: transparent;
+}
+
+    .btn-login.loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid transparent;
+        border-top: 2px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+@@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Анимации для модального окна */
+.modal.fade .login-modal-content {
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .login-modal-content {
+    transform: scale(1);
+}
+/* Стили для модального окна регистрации */
+.register-modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+    .register-modal-content .modal-header {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        color: white;
+        border: none;
+        padding: 2rem 2rem 1rem 2rem;
+        position: relative;
+    }
+
+        .register-modal-content .modal-header .brand-logo i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .register-modal-content .modal-header .btn-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            opacity: 1;
+            padding: 0.5rem;
+        }
+
+            .register-modal-content .modal-header .btn-close:hover {
+                background: rgba(255,255,255,0.3);
+            }
+
+    .register-modal-content .modal-body {
+        padding: 2rem;
+    }
+
+    .register-modal-content .modal-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #2c3e50;
+    }
+
+    .register-modal-content .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .register-modal-content .form-label {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .register-modal-content .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 12px 16px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+        .register-modal-content .form-control:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+        }
+
+    .register-modal-content .password-container {
+        position: relative;
+    }
+
+    .register-modal-content .password-toggle {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #6c757d;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .register-modal-content .form-check-input:checked {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .register-modal-content .form-check-label {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+
+        .register-modal-content .form-check-label a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+            .register-modal-content .form-check-label a:hover {
+                color: #20c997;
+            }
+
+    .register-modal-content .btn-register {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+
+        .register-modal-content .btn-register:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .register-modal-content .btn-register:active {
+            transform: translateY(0);
+        }
+
+    .register-modal-content .login-divider {
+        position: relative;
+        text-align: center;
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+        .register-modal-content .login-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e9ecef;
+        }
+
+        .register-modal-content .login-divider span {
+            background: white;
+            padding: 0 1rem;
+        }
+
+    .register-modal-content .login-text {
+        color: #6c757d;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+/* Индикатор загрузки для регистрации */
+.btn-register.loading {
+    position: relative;
+    color: transparent;
+}
+
+    .btn-register.loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid transparent;
+        border-top: 2px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+/* Анимации для модального окна регистрации */
+.modal.fade .register-modal-content {
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .register-modal-content {
+    transform: scale(1);
+}
